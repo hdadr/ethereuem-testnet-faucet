@@ -1,0 +1,41 @@
+.container {
+  background-size: cover;
+  background-image: url("/bg2.png");
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr 0.8fr;
+  grid-template-rows: 0.1fr 0.4fr 1fr 0.1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . walletConnector"
+    "alert testnetInfo ."
+    ". faucetForms ."
+    "imageSource . .";
+}
+
+.testnetInfo {
+  grid-area: testnetInfo;
+  display: flex;
+  justify-content: center;
+}
+
+.faucetForms {
+  grid-area: faucetForms;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+}
+
+.walletConnector {
+  grid-area: walletConnector;
+}
+
+.alert {
+  grid-area: alert;
+}
+
+.imageSource {
+  grid-area: imageSource;
+}
